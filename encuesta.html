@@ -11,12 +11,17 @@
 
     <link rel="stylesheet" href="css\vendor\bootstrap.min.css">
     <link rel="stylesheet" href="css\vendor\bootstrap.rtl.only.min.css">
-    <link rel="stylesheet" href="css\vendor\bootstrap-float-label.min.css">
+    <link rel="stylesheet" href="css\vendor\fullcalendar.min.css">
+    <link rel="stylesheet" href="css\vendor\dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css\vendor\datatables.responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="css\vendor\select2.min.css">
-    <link rel="stylesheet" href="css\vendor\select2-bootstrap.min.css">
     <link rel="stylesheet" href="css\vendor\perfect-scrollbar.css">
+    <link rel="stylesheet" href="css\vendor\owl.carousel.min.css">
+    <link rel="stylesheet" href="css\vendor\bootstrap-stars.css">
+    <link rel="stylesheet" href="css\vendor\nouislider.min.css">
+    <link rel="stylesheet" href="css\vendor\bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="css\vendor\component-custom-switch.min.css">
     <link rel="stylesheet" href="css\vendor\smart_wizard.min.css">
-    <link rel="stylesheet" href="css\vendor\bootstrap-tagsinput.css">
     <link rel="stylesheet" href="css\main.css">
 </head>
 
@@ -62,12 +67,12 @@
 
         <div class="navbar-right">
             <div class="header-icons d-inline-block align-middle">
-                <div class="d-none d-md-inline-block align-text-bottom mr-3">
-                    <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1" data-toggle="tooltip" data-placement="left" title="Dark Mode">
-                        <input class="custom-switch-input" id="switchDark" type="checkbox" checked="checked">
-                        <label class="custom-switch-btn" for="switchDark"></label>
-                    </div>
-                </div>
+                    <div class="d-none d-md-inline-block align-text-bottom mr-3">
+                            <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1" data-toggle="tooltip" data-placement="left" title="Dark Mode">
+                                <input class="custom-switch-input" id="switchDark" type="checkbox" checked="checked">
+                                <label class="custom-switch-btn" for="switchDark"></label>
+                            </div>
+                        </div>
 
                 <div class="position-relative d-none d-sm-inline-block">
                     <button class="header-icon btn btn-empty" type="button" id="iconMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -214,17 +219,6 @@
             <div class="row">
                 <div class="col-12">
                     <h1>Encuesta</h1>
-                    <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
-                        <ol class="breadcrumb pt-0">
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Library</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
                     <div class="separator mb-5"></div>
                 </div> 
             </div>
@@ -234,8 +228,11 @@
                             <div class="card mb-4">
                                 <div id="smartWizardCustomButtons">
                                         <ul class="card-header">
-                                            <li><a href="#customButtons1">Paso 1<br><small>Primer paso descripcion</small></a></li>
-                                            <li><a href="#customButtons2">Paso 2<br><small>Segundo paso descripcion</small></a></li>
+                                            <li><a href="#customButtons1">DATOS DE CONTACTO DE LA EMPRESA<br><small>Paso 1</small></a></li>
+                                            <li><a href="#customButtons1">LIDERAZGO<br><small>Paso 2</small></a></li>
+                                            <li><a href="#customButtons2">ESTRATEGIA Y PLANEACIÓN<br><small>Paso 3</small></a></li>
+                                            <li><a href="#customButtons3">Paso 3<br><small>Tercer paso descripcion</small></a></li>
+                                            <li><a href="#customButtons3">Paso 3<br><small>Tercer paso descripcion</small></a></li>
                                             <li><a href="#customButtons3">Paso 3<br><small>Tercer paso descripcion</small></a></li>
                                         </ul>
         
@@ -243,24 +240,139 @@
                                             <div id="customButtons1">
                                                 <form id="form-step-0" class="tooltip-label-right" novalidate="">
                                                     <div class="form-group position-relative error-l-100">
-                                                        <label for="email">Email address</label>
+                                                        <label for="text">Razon social</label>
                                                         <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
                                                     </div>
                                                     <div class="form-group position-relative error-l-100">
-                                                        <label for="password">Password</label>
-                                                        <input type="password" class="form-control" name="passwordValidation" id="passwordValidation" placeholder="Your password" required="">
+                                                            <label for="text">Sector de Actividad</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                        </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">N° de empleados</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
                                                     </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Facturacion</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Dirección postal</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Telefono</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Email</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Nombre</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Cargo</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                            <label for="text">Sitio Web</label>
+                                                            <input type="email" class="form-control" name="emailValidation" id="emailValidation" placeholder="Your email address" required="">
+                                                    </div>
+                                                            
                                                 </form>
                                             </div>
                                             <div id="customButtons2">
                                                 <form id="form-step-1" class="tooltip-label-right" novalidate="">
-                                                    <div class="form-group position-relative error-l-75">
-                                                        <label for="name">First Name</label>
-                                                        <input type="text" class="form-control" name="nameValidation" id="nameValidation" placeholder="Your first name" required="">
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Tengo claro y documentado el modelo de negocio de mi empresa y este atiende eficazmente las necesidades de su mercado meta.</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
                                                     </div>
-                                                    <div class="form-group position-relative error-l-75">
-                                                        <label for="lastName">Last Name</label>
-                                                        <input type="text" class="form-control" name="lastNameValidation" id="lastNameValidation" placeholder="Your last name" required="">
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Utilizé algún formato o plantilla genérica para analizar y definir el modelo de negocio de mi empresa.</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Tengo claras las ventajas competitivas de mi empresa y los clientes las valoran en cada uno de esos segmentos.</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Comunico constantemente los valores, misión y visión de mi empresa forma interna y externa (reuniones periódicas, tablero de comunicación, comunicados, correos, etc.).</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
+                                                    </div>
+                                                    <div class="form-group position-relative error-l-100">
+                                                        <label for="text">Mis directivos se involucran activamente en la comunicación de los valores.</label>
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        <br>
+                                                        <input type="radio">
+                                                        
                                                     </div>
                                                 </form>
                                             </div>
